@@ -41,14 +41,26 @@ add.addEventListener("click",function(){
     let createfeildValue = createfeild.value;
     createCreatebtn.addEventListener("click",function(){
         // console.log(this.parentNode.firstElementChild.value);
+        if(data.id.includes(this.parentNode.firstElementChild.value))
+        {
+            alert("input already exits")
+        }
+        else{
         data.id.push(this.parentNode.firstElementChild.value)
+        }
     })
 
 })
 
 create.addEventListener("click",function(){
     // console.log(input.value)
-    data.id.push(this.parentNode.firstElementChild.value)
+    if(data.id.includes(this.parentNode.firstElementChild.value))
+        {
+            alert("input already exits")
+        }
+        else{
+        data.id.push(this.parentNode.firstElementChild.value)
+        }
 })
 submit.addEventListener("click",function(){ 
     console.log(data);
